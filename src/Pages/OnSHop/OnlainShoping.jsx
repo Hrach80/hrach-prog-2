@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../OnSHop/OnSHop.css";
+import "../OnSHop/OnShop.css";
 import initialComputers from "../../Components/data/data";
 import { FaShoppingCart, FaTrash, FaStar, FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
