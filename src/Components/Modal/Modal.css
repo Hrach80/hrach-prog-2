@@ -1,0 +1,130 @@
+/* Modal/Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content.neumorphic-modal {
+    background-color: #e0e5ec;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(189, 195, 204, 0.5),
+        -10px -10px 20px rgba(255, 255, 255, 0.7);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    color: #555;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-subtitle {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.signup-form .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #e0e5ec;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: inset 4px 4px 8px rgba(189, 195, 204, 0.6),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s ease;
+}
+
+.signup-form .input-group:focus-within {
+    box-shadow: inset 2px 2px 4px rgba(189, 195, 204, 0.6),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.input-group .input-icon {
+    color: #888;
+    margin-right: 10px;
+}
+
+.signup-form input {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.signup-form input::placeholder {
+    color: #aaa;
+}
+
+.neumorphic-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e5ec;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    box-shadow: 6px 6px 12px rgba(189, 195, 204, 0.7),
+        -6px -6px 12px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.neumorphic-btn:hover {
+    box-shadow: inset 4px 4px 8px rgba(189, 195, 204, 0.7),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(0.98);
+}
+
+.neumorphic-btn:active {
+    box-shadow: inset 2px 2px 4px rgba(189, 195, 204, 0.7),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.5);
+    transform: scale(0.96);
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover {
+    color: #ff5555;
+}

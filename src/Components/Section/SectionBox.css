@@ -1,0 +1,174 @@
+/* Հիմնական կոդը մնում է անփոփոխ */
+.menu-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e5ec;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    cursor: pointer;
+    color: rgb(228, 23, 23);
+    font-size: 24px;
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.main-menu-circle:active,
+.main-menu-circle.open {
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.5),
+        inset -10px -10px 20px rgba(255, 255, 255, 0.7);
+    transform: scale(0.9) rotate(135deg);
+}
+
+.main-menu-circle.open {
+    transform: scale(0.9) rotate(135deg);
+}
+
+.sub-menu-circles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    pointer-events: none;
+    transition: all 1s ease-in-out;
+}
+
+.sub-menu-circles.open {
+    pointer-events: all;
+    transform: translate(-50%, -50%) rotate(360deg);
+}
+
+.sub-menu-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px !important;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(0, 0) scale(0) rotate(0deg);
+    box-shadow:
+        -10px -10px 20px rgba(255, 255, 255, 0.7),
+        10px 10px 20px rgba(30, 24, 24, 0.2);
+    transition:
+        transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+        opacity 0.8s ease-in-out;
+}
+
+.sub-menu-circle:hover {
+    box-shadow:
+        inset 5px 5px 10px rgba(0, 0, 0, 0.3),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.sub-menu-circles.open .sub-menu-circle {
+    opacity: 1;
+    transform: translate(10px, -150px) scale(1) rotate(-360deg);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-1 {
+    transform: translate(-500px, -150px) scale(1) rotate(-720deg);
+    color: rgb(2, 121, 82);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-2 {
+    transform: translate(150px, -150px) scale(1) rotate(-1080deg);
+    color: rgb(3, 95, 86);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-4 {
+    transform: translate(-510px, 180px) scale(1) rotate(-360deg);
+    color: rgb(3, 171, 249);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-5 {
+    transform: translate(510px, 50px) scale(1) rotate(-720deg);
+    color: orangered;
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-6 {
+    transform: translate(510px, 180px) scale(1) rotate(-1080deg);
+    color: rgb(177, 204, 4);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-7 {
+    transform: translate(-510px, 50px) scale(1) rotate(-360deg);
+    color: rgb(211, 54, 1);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-8 {
+    transform: translate(-230px, -150px) scale(1) rotate(-720deg);
+    color: rgb(42, 74, 43);
+}
+
+.sub-menu-circles.open .sub-menu-circle.item-9 {
+    transform: translate(500px, -150px) scale(1) rotate(-1080deg);
+    color: rgb(78, 1, 211);
+}
+
+.sub-menu-circles .sub-menu-circle {
+    transform: translate(0, 0) scale(0) rotate(0deg);
+    opacity: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sub-menu-circles.open .sub-menu-circle.item-1 {
+        transform: translate(-350px, -150px) scale(1) rotate(-720deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-2 {
+        transform: translate(100px, -150px) scale(1) rotate(-1080deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-4 {
+        transform: translate(-360px, 120px) scale(1) rotate(-360deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-5 {
+        transform: translate(360px, 30px) scale(1) rotate(-720deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-6 {
+        transform: translate(360px, 120px) scale(1) rotate(-1080deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-7 {
+        transform: translate(-360px, 30px) scale(1) rotate(-360deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-8 {
+        transform: translate(-150px, -150px) scale(1) rotate(-720deg);
+    }
+
+    .sub-menu-circles.open .sub-menu-circle.item-9 {
+        transform: translate(350px, -150px) scale(1) rotate(-1080deg);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .menu-container {
+        display: none;
+    }
+}

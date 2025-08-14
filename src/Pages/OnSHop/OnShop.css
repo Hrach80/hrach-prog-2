@@ -1,0 +1,248 @@
+.computers-page {
+    position: absolute;
+    left: 1%;
+    top: 120px;
+    z-index: 100;
+    background-color: #e0e5ec;
+    width: 1350px;
+    height: 515px;
+    box-shadow: 10px 10px 20px rgba(189, 195, 204, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.7);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.computers-page.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.computers-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.computers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.computer-card {
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px rgba(189, 195, 204, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    background-color: #e0e5ec;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.computer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 8px 8px 15px rgba(189, 195, 204, 0.6), -8px -8px 15px rgba(255, 255, 255, 0.8);
+}
+
+.computer-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.computer-card h2 {
+    font-size: 14px;
+    margin: 2px 0;
+    flex-grow: 1;
+    color: #333;
+}
+
+.rating {
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+.star {
+    font-size: 14px;
+    color: #b0b0b0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+.comp-text {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0;
+    flex-grow: 1;
+}
+
+.cart-button {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #e0e5ec;
+    color: #555;
+    box-shadow: inset 2px 2px 5px rgba(189, 195, 204, 0.7), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: #e0e5ec;
+    color: #555;
+    box-shadow: 4px 4px 10px rgba(189, 195, 204, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+.in-cart {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cart-button:not(.in-cart) {
+    background-color: #e0e5ec;
+    color: #555;
+}
+
+.Bec-home {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    font-weight: bold;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #e0e5ec;
+    color: #555;
+    box-shadow: inset 2px 2px 5px rgba(189, 195, 204, 0.7), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.Bec-home:hover {
+    background-color: #e0e5ec;
+    color: #555;
+    box-shadow: 4px 4px 10px rgba(189, 195, 204, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1400px) {
+    .computers-page {
+        width: 95%;
+        left: 2.5%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .computers-page {
+        width: 90%;
+        height: auto;
+        top: 80px;
+    }
+
+    .computer-card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .computers-page {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .computers-list {
+        gap: 15px;
+    }
+
+    .computer-card {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .computer-card img {
+        height: 150px;
+    }
+
+    .computers-page h1 {
+        font-size: 16px;
+    }
+
+    .computer-card h2,
+    .comp-text,
+    .cart-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .computers-page {
+        width: 95%;
+        left: 2.5%;
+        top: 60px;
+    }
+
+    .computers-list {
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .computer-card {
+        width: 45%;
+    }
+
+    .computer-card img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .computers-page {
+        width: 98%;
+        left: 1%;
+        top: 50px;
+        padding: 5px;
+    }
+
+    .computers-page h1 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .computers-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .computer-card {
+        width: 90%;
+    }
+
+    .Bec-home {
+        font-size: 14px;
+        bottom: 5px;
+    }
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.min-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 20px;
+    background-color: #e0e5ec;
+    border-radius: 15px;
+    box-shadow:
+        5px 5px 10px rgba(189, 195, 204, 0.5),
+        -5px -5px 10px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(45deg, #004d99, #00aaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo.hidden {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.min-nav-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.min-nav-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e5ec;
+    border-radius: 50%;
+    box-shadow:
+        3px 3px 6px rgba(189, 195, 204, 0.5),
+        -3px -3px 6px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #555;
+    font-size: 18px;
+}
+
+.min-nav-item:hover {
+    box-shadow:
+        inset 2px 2px 5px rgba(189, 195, 204, 0.7),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    color: #007bff;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-input {
+    flex-grow: 1;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #e0e5ec;
+    box-shadow:
+        inset 2px 2px 5px rgba(189, 195, 204, 0.7),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-close-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #555;
+    margin-left: 10px;
+}

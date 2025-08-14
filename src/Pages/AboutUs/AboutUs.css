@@ -1,0 +1,382 @@
+
+.about-us-box {
+    position: fixed;
+    top: 53.5%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    z-index: 100;
+    width: 1300px;
+    height: 580px;
+    padding: 5px;
+    overflow-y: hidden;
+    background-color: #e0e5ec;
+    box-shadow:
+        10px 10px 20px rgba(189, 195, 204, 0.5),
+        -10px -10px 20px rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.about-us-box.active {
+    transform: translate(1%, -50%);
+    opacity: 1;
+}
+
+.about-us-box h1,
+.about-us-box h2 {
+    text-align: center;
+    color: #333;
+}
+
+.about-us-box h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.about-us-box h2 {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.company-description {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.contact-section {
+    margin-bottom: 5px;
+}
+
+.contact-info p,
+.contact-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #444;
+    margin: 4px 0;
+    text-decoration: none;
+}
+
+
+.social-media-section {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:nth-child(1) {
+    color: #3b5998;
+
+}
+
+.social-icons a:nth-child(2) {
+    color: #E1306C;
+
+}
+
+.social-icons a:nth-child(3) {
+    color: #0e76a8;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+
+.message-section {
+    max-width: 450px;
+    width: 100%;
+    margin: 10px auto 0;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 7px 7px 14px rgba(189, 195, 204, 0.5),
+        -7px -7px 14px rgba(255, 255, 255, 0.7);
+    background-color: #e0e5ec;
+}
+
+.message-section .section-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #444;
+}
+
+.neumorphic-form .form-group {
+    margin-bottom: 2px;
+}
+
+.neumorphic-form label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+
+.neumorphic-form .neumorphic-input,
+.neumorphic-form .neumorphic-textarea,
+.neumorphic-form .neumorphic-btn {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.neumorphic-form .neumorphic-input,
+.neumorphic-form .neumorphic-textarea {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: inset 4px 4px 8px rgba(189, 195, 204, 0.6),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    background-color: #e0e5ec;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.neumorphic-form .neumorphic-input:focus,
+.neumorphic-form .neumorphic-textarea:focus {
+    box-shadow: inset 2px 2px 5px rgba(189, 195, 204, 0.7),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.neumorphic-form .neumorphic-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.neumorphic-form .neumorphic-btn {
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e5ec;
+    color: #444;
+    box-shadow: 6px 6px 12px rgba(189, 195, 204, 0.7),
+        -6px -6px 12px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.neumorphic-form .neumorphic-btn:hover {
+    box-shadow: 2px 2px 5px rgba(189, 195, 204, 0.7),
+        -2px -2px 5px rgba(255, 255, 255, 0.5);
+    transform: translateY(1px);
+}
+@media (max-width: 1400px) {
+    .about-us-box {
+        width: 95%;
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    .about-us-box.active {
+        transform: translate(2.5%, -50%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-us-box {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+
+    .about-us-box.active {
+        transform: translate(5%, -50%);
+    }
+
+    .about-us-box h1 {
+        font-size: 18px;
+    }
+
+    .about-us-box h2 {
+        font-size: 14px;
+    }
+
+    .company-description,
+    .contact-info p,
+    .contact-info a {
+        font-size: 12px;
+    }
+
+    .message-section {
+        max-width: 300px;
+        margin: 15px auto 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us-box {
+        width: 90%;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+    }
+
+    .about-us-box.active {
+        transform: translate(5%, -50%);
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 0 6px;
+    }
+
+    .message-section {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-box {
+        width: 95%;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+    }
+
+    .about-us-box.active {
+        transform: translate(2.5%, -50%);
+    }
+
+    .about-us-box h1 {
+        font-size: 16px;
+    }
+
+    .about-us-box h2 {
+        font-size: 13px;
+    }
+
+    .company-description,
+    .contact-info p,
+    .contact-info a {
+        font-size: 11px;
+    }
+
+    .social-icons a {
+        font-size: 16px;
+        margin: 0 4px;
+    }
+
+    .message-section {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .neumorphic-form .neumorphic-input,
+    .neumorphic-form .neumorphic-textarea {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .neumorphic-form .neumorphic-textarea {
+        min-height: 60px;
+    }
+
+    .neumorphic-form .neumorphic-btn {
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us-box {
+        width: 98%;
+        left: 0;
+        top: 50%;
+        padding: 8px;
+        transform: translate(-100%, -50%);
+    }
+
+    .about-us-box.active {
+        transform: translate(1%, -50%);
+    }
+
+    .about-us-box h1 {
+        font-size: 14px;
+    }
+
+    .about-us-box h2 {
+        font-size: 12px;
+    }
+
+    .company-description,
+    .contact-info p,
+    .contact-info a {
+        font-size: 10px;
+    }
+
+    .social-icons a {
+        font-size: 14px;
+        margin: 0 3px;
+    }
+
+    .close-button {
+        font-size: 16px;
+    }
+
+    .message-section {
+        max-width: 95%;
+        padding: 8px;
+    }
+
+    .message-section .section-title {
+        font-size: 12px;
+    }
+
+    .neumorphic-form label {
+        font-size: 9px;
+    }
+
+    .neumorphic-form .neumorphic-input,
+    .neumorphic-form .neumorphic-textarea {
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .neumorphic-form .neumorphic-textarea {
+        min-height: 40px;
+    }
+
+    .neumorphic-form .neumorphic-btn {
+        padding: 6px;
+        font-size: 10px;
+    }
+}
